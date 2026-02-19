@@ -13,24 +13,25 @@ export default function ModelContent({
   return (
     <AnimatePresence>
       {open && (
-        <motion.div 
-        initial = {{
-          scale: 0.98,
-          opacity: 0
-        }}
-        animate = {{
-          scale: 1,
-          opacity: 1
-        }}
-        exit={{
-          scale: 0.98,
-          opacity:0
-        }}
-        transition={{
-          duration: 0.2,
-          ease: easeOut
-        }}
-        className="absolute bg-neutral-900 h-84 w-76 md:w-102 rounded-md flex flex-col">
+        <motion.div
+          initial={{
+            scale: 0.98,
+            opacity: 0,
+          }}
+          animate={{
+            scale: 1,
+            opacity: 1,
+          }}
+          exit={{
+            scale: 0.98,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.2,
+            ease: easeOut,
+          }}
+          className="absolute bg-white border dark:border-neutral-50/0 border-neutral-300/90  dark:bg-neutral-900 h-84 w-76 md:w-102 rounded-md flex flex-col"
+        >
           {children}
         </motion.div>
       )}

@@ -10,10 +10,10 @@ export default function ModelInput() {
   return (
     <>
       <div className="flex justify-between items-center bg-oklch(27.4% 0.006 286.033) mx-2 my-1">
-        <Search className="size-[17px] text-neutral-100/40" />
+        <Search className="size-4.25 text-neutral-700/80 dark:text-neutral-100/40" />
         <input
           placeholder="Search for the model"
-          className="ml-1 p-1 outline-0 placeholder:text-neutral-100/40 placeholder:text-[14px] w-full"
+          className="ml-1 p-1 outline-0 placeholder:text-neutral-700/80 darK:placeholder:text-neutral-100/40 placeholder:text-[14px] w-full"
           onChange={handleSearch}
         ></input>
         <button
@@ -22,10 +22,10 @@ export default function ModelInput() {
             setSearch("");
           }}
         >
-          <X className="size-[18px] text-neutral-100/70 rounded-full cursor-pointer" />
+          <X className="size-4.5 text-neutral-700 dark:text-neutral-100/70 rounded-full cursor-pointer" />
         </button>
       </div>
-      <div className="border-b border-neutral-50/10"></div>
+      <div className="border-b border-neutral-300/90 dark:border-neutral-50/10"></div>
     </>
   );
 }
