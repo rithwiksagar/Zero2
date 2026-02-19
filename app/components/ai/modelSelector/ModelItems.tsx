@@ -21,7 +21,7 @@ export default function ModelItems() {
             {model.names.map((modelName) => (
               <div
                 key={modelName}
-                className={`text-neutral-700 dark:text-neutral-50 text-[14px] pl-6 pr-2 py-1 cursor-pointer hover:bg-zinc-50 dark:hover:bg-neutral-800/80 rounded-md flex justify-between items-center ${defaultModel === modelName ? "bg-zinc-100 dark:bg-neutral-800/40" : ""}`}
+                className={`text-neutral-700 dark:text-neutral-50 text-[14px] pl-6 pr-2 py-1 cursor-pointer hover:bg-zinc-50 dark:hover:bg-neutral-800/80 rounded-md flex justify-between items-center ${defaultModel === modelName ? "bg-zinc-100/60 dark:bg-neutral-800/30" : ""}`}
                 onClick={() => {
                   setDefaultModel(modelName);
                   setOpen(false);
@@ -30,7 +30,7 @@ export default function ModelItems() {
               >
                 {modelName}
                 {defaultModel === modelName ? (
-                  <Check className="size-[18px] text-neutral-600" />
+                  <Check className="size-4.5 text-neutral-700/80" />
                 ) : null}
               </div>
             ))}
