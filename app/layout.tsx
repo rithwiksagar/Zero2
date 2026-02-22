@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vault",
+  title: "Zero2 | AI interfaces",
   description:
-    "Vault provides a curated set of modern UI components and developer utilities designed for building responsive, customizable, and accessible AI chat experiences in web applications.",
+    "Zero2 UI provides a curated set of modern UI components and developer utilities designed for building responsive, customizable, and accessible AI chat experiences in web applications.",
 };
 
 export default function RootLayout({
@@ -31,9 +31,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class">
-          <ToggleTheme />
-        </ThemeProvider>
         <aside>
           <Sidebar />
         </aside>

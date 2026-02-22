@@ -10,7 +10,7 @@ export default function ToggleTheme(){
     return (
         <button 
         onClick={()=> setTheme(theme === "dark"? "light": "dark")}
-        className="pt-4 pl-4 rounded-xl cursor-pointer absolute"
+        className="pl-6 rounded-xl cursor-pointer absolute"
         >
         {theme === "dark"? <Moon className="size-4 text-white/90"/>: <Sun className="size-4 bg text-neutral-900"/>}
         </button>
