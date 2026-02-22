@@ -8,7 +8,7 @@ interface sidebaritems {
 }
 export const sidebarItems: sidebaritems[] = [
   {
-    title: "Getting Started",
+    title: "Get Started",
     id: "1",
     items: [
       { title: "Introduction", href: "/" },
@@ -46,14 +46,14 @@ export default function Sidebar() {
       {sidebarItems.map((elements) => (
         <div
           key={elements.id}
-          className="p-3 text-[16px] font-medium text-neutral-500 dark:text-neutral-50/70"
+          className="p-3 text-[16px] font-medium text-neutral-500 dark:text-neutral-50/70 pl-4"
         >
           {elements.title}
           {elements.items.map((item) => (
             <Link
               href={item.href}
               key={item.title}
-              className="text-neutral-900 flex flex-col font-medium pl-6 py-1 cursor-pointer text-[15px] dark:text-neutral-50/90 hover:bg-neutral-100 rounded-sm dark:hover:bg-neutral-800"
+              className="text-neutral-900 flex flex-col font-medium py-1 pl-6 cursor-pointer text-[15px] dark:text-neutral-50/90 hover:bg-neutral-100 rounded-sm dark:hover:bg-neutral-800"
             >
               {item.title}
             </Link>
