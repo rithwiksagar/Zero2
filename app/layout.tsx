@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import ToggleTheme from "./hooks/ToggleTheme";
+import ToggleTheme from "../hooks/ToggleTheme";
+import Sidebar from "@/components/sidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ThemeProvider attribute="class">
+          <ToggleTheme />
+        </ThemeProvider>
+        <aside>
+          <Sidebar />
+        </aside>
         {children}
       </body>
     </html>
