@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="ml-110 mt-60 flex-1 h-screen">
-      <h1 className="text-5xl">
+    <div className="ml-96 mt-40 flex-1">
+      {/* <h1 className="text-5xl">
         Build AI Interfaces faster with{" "}
         <span className="dark:text-white/80 text-neutral-700">Zero2.</span>
       </h1>
@@ -22,7 +22,7 @@ export default function Home() {
         >
           View components
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
