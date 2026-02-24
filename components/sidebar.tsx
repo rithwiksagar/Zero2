@@ -41,7 +41,7 @@ export const sidebarItems: sidebaritems[] = [
   },
   {
     title: "Content",
-    id: "3",
+    id: "4",
     items: [
       { title: "Markdown", href: "/docs/markdown" },
       { title: "Code Block", href: "/docs/code-block" },
@@ -52,7 +52,7 @@ export const sidebarItems: sidebaritems[] = [
   },
   {
     title: "Content",
-    id: "3",
+    id: "5",
     items: [
       { title: "Markdown", href: "/docs/markdown" },
       { title: "Code Block", href: "/docs/code-block" },
@@ -84,9 +84,6 @@ export default function Sidebar() {
           ))}
         </div>
       ))}
-      <ThemeProvider attribute="class">
-        <ToggleTheme />
-      </ThemeProvider>
     </div>
   </>);
 }
