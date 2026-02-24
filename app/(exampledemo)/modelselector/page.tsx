@@ -5,7 +5,7 @@ import {
   ModelSelector,
   ModelTrigger,
 } from "@/components/ai/modelSelector";
-import ToggleTheme from "@/hooks/ToggleTheme";
+import ToggleTheme from "@/hooks/UseToggleTheme";
 import { ThemeProvider } from "next-themes";
 
 export default function Component() {

@@ -27,14 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="font-helvetica antialiased"
-      >
-      <nav><TopBar /></nav>
+      <body className="font-helvetica antialiased">
+        <nav>
+          <TopBar />
+        </nav>
         <aside>
           <Sidebar />
         </aside>
-        {children}
+        <div className="ml-84">{children}</div>
       </body>
     </html>
   );

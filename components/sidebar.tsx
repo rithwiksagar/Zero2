@@ -1,4 +1,4 @@
-import ToggleTheme from "@/hooks/ToggleTheme";
+import ToggleTheme from "@/hooks/UseToggleTheme";
 import { ThemeProvider } from "next-themes";
 import Link from "next/link";
 interface sidebaritems {
