@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className="font-helvetica antialiased
-       selection:bg-black dark:selection:bg-white
+       selection:bg-neutral-800 dark:selection:bg-white
         selection:text-white dark:selection:text-black"
       >
         <nav>
