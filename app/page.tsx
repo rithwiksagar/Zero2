@@ -3,7 +3,7 @@ export default function Home() {
     <div className="mt-40 flex-1">
       <h1 className="text-5xl">
         Build AI Interfaces faster with{" "}
-        <span className="">BrainFrame UI</span>
+        <span className="font-medium font-serif tracking-wide">BrainFrame</span>
       </h1>
       <h4 className="text-xl mt-1 dark:text-neutral-300">
         A reusable React component library for building AI chat, workflows, and
