@@ -20,7 +20,7 @@ export const sidebarItems: sidebaritems[] = [
     title: "AI primitives",
     id: "2",
     items: [
-      { title: "Model Selector", href: "/modelselector" },
+      { title: "Model Selector", href: "/docs/modelselector" },
       { title: "Message", href: "/docs/message" },
       { title: "Prompt Input", href: "/docs/prompt-input" },
       { title: "Prompt Suggestion", href: "/docs/prompt-suggestion" },

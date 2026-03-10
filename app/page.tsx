@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="mt-44 ml-10 flex-1">
-      <h1 className="text-4xl font-serif">
+      <h1 className="text-4xl">
         Build AI Interfaces faster with{" "}
-        <span className="font-medium font-serif tracking-wide">BrainFrame</span>
+        <span className="font-medium  tracking-wide">BrainFrame</span>
       </h1>
       <h4 className="text-[18px] mt-2 text-neutral-500">
         Composable UI components built for AI applications.
