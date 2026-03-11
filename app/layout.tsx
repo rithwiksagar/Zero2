@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
 import TopBar from "@/components/topbar";
+import { SidebarProvider } from "@/libs/sidebarcontext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,13 +33,15 @@ export default function RootLayout({
        selection:bg-neutral-800 dark:selection:bg-white
         selection:text-white dark:selection:text-black"
       >
-        <nav>
-          <TopBar />
-        </nav>
-        <aside>
-          <Sidebar />
-        </aside>
-        <div className="ml-74">{children}</div>
+        <SidebarProvider>
+          <nav>
+            <TopBar />
+          </nav>
+          <aside>
+            <Sidebar />
+          </aside>
+          <div className="mx-4 md:ml-74">{children}</div>
+        </SidebarProvider>
       </body>
     </html>
   );

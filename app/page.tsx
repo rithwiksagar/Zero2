@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 export default function Home() {
@@ -8,10 +7,11 @@ export default function Home() {
         Build AI Interfaces faster with{" "}
         <span className="font-medium  tracking-wide">BrainFrame</span>
       </h1>
-      <h4 className="text-[15px] lg:text-[18px] mt-2 text-neutral-500">
+      <h4 className="text-lg md:text-xl lg:text-2xl mt-2 text-neutral-500">
         Composable UI components built for AI applications.
-        <br />
-        Simple to integrate, easy to customize, and ready for production.
+        <span className="hidden md:block">
+          Simple to integrate, easy to customize, and ready for production.
+        </span>
       </h4>
       <div className="flex gap-4 mt-6">
         <Link

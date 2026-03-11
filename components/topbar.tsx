@@ -1,21 +1,38 @@
+"use client";
 import UseToggleTheme from "@/hooks/UseToggleTheme";
-import { Github } from "lucide-react";
+import { SidebarContext } from "@/libs/sidebarcontext";
+import { Github, Menu } from "lucide-react";
 import { ThemeProvider } from "next-themes";
 import Link from "next/link";
+import { useContext } from "react";
 
 export default function TopBar() {
+  const { open, setOpen } = useContext(SidebarContext)!;
   return (
-    <div className="flex w-screen z-10 px-15 py-3 justify-between items-center border-b border-neutral-700/15 backdrop-blur-xs fixed left-0 top-0">
-    <div className="">
-      <Link href={"/"} className="text-2xl font-medium tracking-wide">BrainFrame</Link>
-    </div>
+    <div className="flex w-full z-10 px-5 md:px-15 py-3 justify-between items-center border-b border-neutral-700/15 backdrop-blur-xs fixed left-0 top-0">
+      <div className="">
+        <Link
+          href={"/"}
+          className="text-xl md:text-2xl font-medium tracking-wide"
+        >
+          BrainFrame.
+        </Link>
+      </div>
       <div className="flex gap-6">
-        <Link href="https://github.com/rithwiksagar/Zero2"><Github className="size-4.5"/></Link>
+        <Link href="https://github.com/rithwiksagar/Zero2">
+          <Github className="size-4.5" />
+        </Link>
         <div className="flex justify-center items-center">
-        <ThemeProvider attribute="class">
-          <UseToggleTheme />
-        </ThemeProvider>
+          <ThemeProvider attribute="class">
+            <UseToggleTheme />
+          </ThemeProvider>
         </div>
+        <Menu
+          onClick={() => {
+            setOpen(!open);
+          }}
+          className="size-4.5 block md:hidden cursor-pointer"
+        />
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
-import ToggleTheme from "@/hooks/UseToggleTheme";
-import { ThemeProvider } from "next-themes";
+"use client";
+import { SidebarContext } from "@/libs/sidebarcontext";
+import { AnimatePresence, easeOut, motion } from "motion/react";
 import Link from "next/link";
+import { useContext, useState } from "react";
 interface sidebaritems {
   title: string;
   id: string;
@@ -63,14 +65,32 @@ export const sidebarItems: sidebaritems[] = [
   },
 ];
 export default function Sidebar() {
+  const { open, setOpen } = useContext(SidebarContext)!;
   return (
-    <>
-      <div
-        className="fixed left-0 top-0 z-10 h-160 pt-4 pb-12 w-60 border-r
-     border-neutral-700/20 rounded-xl mt-20 ml-5 
-     mask-[linear-gradient(to_bottom,transparent,black_15%,black_80%,transparent)]
+    <AnimatePresence>
+      <motion.div
+        initial={{
+          opacity: 0,
+          width: 0,
+        }}
+        animate={{
+          opacity: 1,
+          width: 240,
+        }}
+        exit={{
+          width: 0,
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.3,
+          ease: easeOut,
+        }}
+        className={`fixed left-0 top-0 z-999 h-160 w-60 pt-4 pb-12 border-r
+     border-neutral-700/20 rounded-r-xl mt-13 md:mt-20 md:ml-5
+     backdrop-blur-3xl md:backdrop-blur-none
+     md:mask-[linear-gradient(to_bottom,transparent,black_15%,black_80%,transparent)]
       dark:border-neutral-100/10 overflow-y-scroll [scrollbar-width:none]
-      select-none "
+      select-none ${open ? "block" : "hidden"} md:block`}
       >
         {sidebarItems.map((elements) => (
           <div
@@ -83,13 +103,16 @@ export default function Sidebar() {
                 href={item.href}
                 key={item.title}
                 className="text-neutral-900 flex flex-col font-medium py-1 pl-2 cursor-pointer text-[15px] dark:text-neutral-50/90 hover:bg-neutral-200/30 rounded-sm dark:hover:bg-neutral-800/60"
+                onClick={() => {
+                  setOpen(!open);
+                }}
               >
                 {item.title}
               </Link>
             ))}
           </div>
         ))}
-      </div>
-    </>
+      </motion.div>
+    </AnimatePresence>
   );
 }
