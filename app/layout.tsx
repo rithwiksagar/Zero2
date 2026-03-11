@@ -38,7 +38,7 @@ export default function RootLayout({
         <aside>
           <Sidebar />
         </aside>
-        <div className="ml-84">{children}</div>
+        <div className="ml-74">{children}</div>
       </body>
     </html>
   );
